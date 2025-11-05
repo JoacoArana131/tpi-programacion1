@@ -37,74 +37,57 @@ El sistema está modularizado en archivos separados y permite al usuario interac
 
 ## ▶️ Ejecución
 
-1. Asegurarse de tener Python 3.x instalado, haber escrito "pip install requests
-" en Consola, Terminal o PowerShell  y/o Visual Studio Code (opcional)
-2. Si no tiene Visual Studio Code, escriba en su PowerShell, Terminal o Consola:
+1. Asegurarse de tener Docker instalado en el sistema.
+2. Abrir una terminal y ubicarse en la carpeta raíz del proyecto (donde están el archivo Dockerfile y la carpeta src):
 
-   cd *ruta de la carpeta src*
+cd ruta/a/la/carpeta/del/proyecto
 
-o en Linux/macOS:
+3. Construir la imagen del contenedor:
 
-   cd ~*ruta de la carpeta src*
+docker build -t miprograma .
 
-3. Ejecutar el programa desde `main.py`
+4. Ejecutar el programa dentro del contenedor:
 
-Si lo esta haciendo en Consola, Terminal o PowerShell, escriba:
+docker run -it --rm miprograma
 
-   python main.py
+5. Al iniciar el programa, si el archivo paises.csv no existe, se generará automáticamente desde la API.
+6. Use el menú interactivo para:
+1) Buscar países
 
-4. Al ejectuar el programa, si el archivo paises.csv no existe, se generará automáticamente desde la API.
+Ejemplo:
+🔍 Ingrese el nombre o parte del nombre: vene
+📋 Resultados:
+• Venezuela - 28.720.000 hab - 916.445 km² - América
+2) Aplicar filtros
 
-5. Use el menú interactivo para:
+Ejemplo:
+📂 FILTROS DISPONIBLES- Por continente
+- Por rango de población
+- Por rango de superficie
+Seleccione filtro (a/b/c): a
+🌎 Ingrese continente: america
+📋 Resultados:
+• Argentina - 45.851.378 hab - 2.736.690 km² - América
+• Bolivia - 12.637.909 hab - 1.083.300 km² - América
 
-- Buscar países
+3) Ordenar por distintos criterios
 
-  Ejemplo: 
-  🔍 Ingrese el nombre o parte del nombre: vene
+Ejemplo:
+🔃 ORDENAR POR- Nombre
+- Población
+- Superficie
+Seleccione criterio (a/b/c): a
+¿Orden descendente? (s/n): si
+📋 Resultados:
+• Afganistán - 42.594.582 hab - 652.230 km² - Asia
+• Albania - 2.800.000 hab - 28.748 km² - Europa
 
-  📋 Resultados:
-   • Venezuela - 28720000 hab - 916445 km² - america
+4) Ver estadísticas
 
-- Aplicar filtros
+Ejemplo:
+País con mayor población: China (1.444.216.107)
 
-  Ejemplo:
-  📂 FILTROS DISPONIBLES
-   a) Por continente
-   b) Por rango de población
-   c) Por rango de superficie
-   Seleccione filtro (a/b/c): a
-
-  🌎 Ingrese continente: america
-
-  📋 Resultados:
-  • Argentina - 45851378 hab - 2736690 km² - america
-  • Bolivia - 12637909 hab - 1083300 km² - america
-  ...
-
-- Ordenar por distintos criterios
-
-  Ejemplo:
- 🔃 ORDENAR POR
-  a) Nombre
-  b) Población
-  c) Superficie
-  Seleccione criterio (a/b/c): a
-
-  ¿Orden descendente? (s/n): si
-
-  📋 Resultados:
-  • Afganistan - 42594582 hab - 652230 km² - asia
-  • Albania - 2800000 hab - 28748 km² - europa
-  ...
-
-  - Ver estadísticas
-
-  Ejemplo:
-  🔹 País con mayor población: China (1444216107)
-  ...
-
-6. Presione ENTER para volver al menú después de cada operación.
-
+7. Presione ENTER para volver al menú después de cada operación
 
 api.py, main.py, Informe, Marco Teorico y Test/Arreglos hechos por Cordoba Ezequiel
 lista.py, menu.py, capturas y readme hecho por Arana Joaquín
