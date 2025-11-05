@@ -38,7 +38,9 @@ El sistema está modularizado en archivos separados y permite al usuario interac
 ## ▶️ Ejecución
 
 1. Asegurarse de tener Docker instalado en el sistema.
-2. Abrir una terminal y ubicarse en la carpeta raíz del proyecto (donde están el archivo Dockerfile y la carpeta src):
+
+
+2. ejectuar el .bat (si esta en windows) o el .sh(si esta en linux) o abrir una terminal y ubicarse en la carpeta raíz del proyecto (donde están el archivo Dockerfile y la carpeta src):
 
 cd ruta/a/la/carpeta/del/proyecto
 
