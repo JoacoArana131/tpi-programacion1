@@ -21,12 +21,11 @@ def mostrar_encabezado():
 # Función principal que muestra el menú y gestiona la interacción con el usuario.
 # Carga los datos desde el CSV y permite buscar, filtrar, ordenar y ver estadísticas.
 
-def mostrar_menu():
+def mostrar_menu(paises):
     
     # Carga los datos desde el archivo CSV.
     # Si no se pudo cargar, muestra un mensaje de error y termina el menú.
 
-    paises = cargar_datos_csv("paises.csv")
 
     if not paises:
         print("⚠️ No se cargaron países. Verifique el archivo CSV.")
